@@ -1,0 +1,51 @@
+[2022-01-18 23:04:33] INFO [setUpClass testcase_04_addReceiveAddr.py 12] addReceiveAddr接口用例页开始
+[2022-01-18 23:04:34] DEBUG [_new_conn connectionpool.py 221] Starting new HTTP connection (1): 192.168.107.135:80
+[2022-01-18 23:04:34] DEBUG [_make_request connectionpool.py 428] http://192.168.107.135:80 "POST /freshO2O/receiveaddrAdd.action HTTP/1.1" 200 127
+[2022-01-18 23:04:34] INFO [TestCase_Log testcase_log.py 7] 测试用例：addReceiveAddr_para_nomal
+[2022-01-18 23:04:34] INFO [TestCase_Log testcase_log.py 8] Url：http://192.168.107.135:80/freshO2O/receiveaddrAdd.action
+[2022-01-18 23:04:34] INFO [TestCase_Log testcase_log.py 9] 请求参数：{"account":"hc","username":"uhc","phone":"15873566752","addr":"深圳市南山区沙河街道"}
+[2022-01-18 23:04:34] INFO [TestCase_Log testcase_log.py 10] 期望结果：{"result":"ok"}
+[2022-01-18 23:04:34] INFO [TestCase_Log testcase_log.py 11] 实际结果：{"account":"hc","address":null,"id":0,"msg":"添加用户地址成功！","phone":"15873566752","result":"ok","username":"uhc"}
+[2022-01-18 23:04:34] INFO [testRegister testcase_04_addReceiveAddr.py 29] 测试结果为Pass
+[2022-01-18 23:04:34] INFO [testRegister testcase_04_addReceiveAddr.py 33] 测试结果为Fail
+[2022-01-18 23:04:34] DEBUG [_new_conn connectionpool.py 221] Starting new HTTP connection (1): 192.168.107.135:80
+[2022-01-18 23:04:34] DEBUG [_make_request connectionpool.py 428] http://192.168.107.135:80 "POST /freshO2O/receiveaddrAdd.action HTTP/1.1" 200 127
+[2022-01-18 23:04:34] INFO [TestCase_Log testcase_log.py 7] 测试用例：addReceiveAddr_para_mix
+[2022-01-18 23:04:34] INFO [TestCase_Log testcase_log.py 8] Url：http://192.168.107.135:80/freshO2O/receiveaddrAdd.action
+[2022-01-18 23:04:34] INFO [TestCase_Log testcase_log.py 9] 请求参数：{"account":"hc","username":"uhc","phone":"15873566752","addr":"深圳市南山区沙河街道","id":0}
+[2022-01-18 23:04:34] INFO [TestCase_Log testcase_log.py 10] 期望结果：{"result":"fail"}
+[2022-01-18 23:04:34] INFO [TestCase_Log testcase_log.py 11] 实际结果：{"account":"hc","address":null,"id":0,"msg":"添加用户地址成功！","phone":"15873566752","result":"ok","username":"uhc"}
+[2022-01-18 23:04:34] INFO [testRegister testcase_04_addReceiveAddr.py 33] 测试结果为Fail
+[2022-01-18 23:04:35] DEBUG [_new_conn connectionpool.py 221] Starting new HTTP connection (1): 192.168.107.135:80
+[2022-01-18 23:04:35] DEBUG [_make_request connectionpool.py 428] http://192.168.107.135:80 "POST /freshO2O/receiveaddrAdd.action HTTP/1.1" 200 126
+[2022-01-18 23:04:35] INFO [TestCase_Log testcase_log.py 7] 测试用例：addReceiveAddr_para_type
+[2022-01-18 23:04:35] INFO [TestCase_Log testcase_log.py 8] Url：http://192.168.107.135:80/freshO2O/receiveaddrAdd.action
+[2022-01-18 23:04:35] INFO [TestCase_Log testcase_log.py 9] 请求参数：{"account":"hc","username":25,"phone":"15873566752","addr":"深圳市南山区沙河街道"}
+[2022-01-18 23:04:35] INFO [TestCase_Log testcase_log.py 10] 期望结果：{"result":"fail"}
+[2022-01-18 23:04:35] INFO [TestCase_Log testcase_log.py 11] 实际结果：{"account":"hc","address":null,"id":0,"msg":"添加用户地址成功！","phone":"15873566752","result":"ok","username":"25"}
+[2022-01-18 23:04:35] INFO [testRegister testcase_04_addReceiveAddr.py 33] 测试结果为Fail
+[2022-01-18 23:04:35] DEBUG [_new_conn connectionpool.py 221] Starting new HTTP connection (1): 192.168.107.135:80
+[2022-01-18 23:04:35] DEBUG [_make_request connectionpool.py 428] http://192.168.107.135:80 "POST /freshO2O/receiveaddrAdd.action HTTP/1.1" 200 160
+[2022-01-18 23:04:35] INFO [TestCase_Log testcase_log.py 7] 测试用例：addReceiveAddr_para_len
+[2022-01-18 23:04:35] INFO [TestCase_Log testcase_log.py 8] Url：http://192.168.107.135:80/freshO2O/receiveaddrAdd.action
+[2022-01-18 23:04:35] INFO [TestCase_Log testcase_log.py 9] 请求参数：{"account":"hc","username":"uhc","phone":"15873566752158735667521587356675215873566752","addr":"深圳市南山区沙河街道"}
+[2022-01-18 23:04:35] INFO [TestCase_Log testcase_log.py 10] 期望结果：{"result":"fail"}
+[2022-01-18 23:04:35] INFO [TestCase_Log testcase_log.py 11] 实际结果：{"account":"hc","address":null,"id":0,"msg":"添加用户地址成功！","phone":"15873566752158735667521587356675215873566752","result":"ok","username":"uhc"}
+[2022-01-18 23:04:35] INFO [testRegister testcase_04_addReceiveAddr.py 33] 测试结果为Fail
+[2022-01-18 23:04:36] DEBUG [_new_conn connectionpool.py 221] Starting new HTTP connection (1): 192.168.107.135:80
+[2022-01-18 23:04:36] DEBUG [_make_request connectionpool.py 428] http://192.168.107.135:80 "POST /freshO2O/receiveaddrAdd.action HTTP/1.1" 200 129
+[2022-01-18 23:04:36] INFO [TestCase_Log testcase_log.py 7] 测试用例：addReceiveAddr_bypass_auth
+[2022-01-18 23:04:36] INFO [TestCase_Log testcase_log.py 8] Url：http://192.168.107.135:80/freshO2O/receiveaddrAdd.action
+[2022-01-18 23:04:36] INFO [TestCase_Log testcase_log.py 9] 请求参数：{"account":"dudu","username":"uhc","phone":"15873566756","addr":"深圳市南山区沙河街道"}
+[2022-01-18 23:04:36] INFO [TestCase_Log testcase_log.py 10] 期望结果：{"result":"fail"}
+[2022-01-18 23:04:36] INFO [TestCase_Log testcase_log.py 11] 实际结果：{"account":"dudu","address":null,"id":0,"msg":"添加用户地址成功！","phone":"15873566756","result":"ok","username":"uhc"}
+[2022-01-18 23:04:36] INFO [testRegister testcase_04_addReceiveAddr.py 33] 测试结果为Fail
+[2022-01-18 23:04:36] DEBUG [_new_conn connectionpool.py 221] Starting new HTTP connection (1): 192.168.107.135:80
+[2022-01-18 23:04:36] DEBUG [_make_request connectionpool.py 428] http://192.168.107.135:80 "POST /freshO2O/receiveaddrAdd.action HTTP/1.1" 200 127
+[2022-01-18 23:04:36] INFO [TestCase_Log testcase_log.py 7] 测试用例：addReceiveAddr_business_logic
+[2022-01-18 23:04:36] INFO [TestCase_Log testcase_log.py 8] Url：http://192.168.107.135:80/freshO2O/receiveaddrAdd.action
+[2022-01-18 23:04:36] INFO [TestCase_Log testcase_log.py 9] 请求参数：{"account":"hc","username":"uhc","phone":"15873566752","phone":"18102948481","addr":"深圳市南山区沙河街道"}
+[2022-01-18 23:04:36] INFO [TestCase_Log testcase_log.py 10] 期望结果：{"result":"fail"}
+[2022-01-18 23:04:36] INFO [TestCase_Log testcase_log.py 11] 实际结果：{"account":"hc","address":null,"id":0,"msg":"添加用户地址成功！","phone":"18102948481","result":"ok","username":"uhc"}
+[2022-01-18 23:04:36] INFO [testRegister testcase_04_addReceiveAddr.py 33] 测试结果为Fail
+[2022-01-18 23:04:36] INFO [tearDownClass testcase_04_addReceiveAddr.py 46] addReceiveAddr接口用例页结束
