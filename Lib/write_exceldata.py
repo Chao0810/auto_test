@@ -5,7 +5,8 @@ xlutils可以将xlrd.Book转为xlwt.Workbook，从而可以
 '''
 
 from xlutils.copy import copy
-import xlrd
+import xlrd,sys
+sys.path.append(r"D:\project\cailanzi")
 
 def writeExcelData(datafile,sheetname,row,column,value):
     wb = xlrd.open_workbook(datafile,formatting_info=True) #open_workbook()内若没有添加formatting_info=True，则保存的文件不会保留原有格式

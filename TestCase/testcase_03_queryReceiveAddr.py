@@ -1,6 +1,7 @@
-import unittest,requests,json,logging,ddt
+import unittest,requests,json,logging,ddt,sys
 from Config import config
 from Lib import readExcelData,testcase_log,write_exceldata
+sys.path.append(r"D:\project\cailanzi")
 
 data_list = readExcelData.getExceldata(config.api_data_path,config.sh3)
 

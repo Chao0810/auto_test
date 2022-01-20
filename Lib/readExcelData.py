@@ -1,6 +1,6 @@
-import xlrd,logging,requests,unittest,json
+import xlrd,json,sys
 from Config import  config
-from Lib import testcase_log
+sys.path.append(r"D:\project\cailanzi")
 
 
 #

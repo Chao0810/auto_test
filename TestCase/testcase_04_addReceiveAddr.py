@@ -1,6 +1,7 @@
-import unittest,logging,requests,json,ddt
+import unittest,logging,requests,json,ddt,sys
 from Lib import db,readExcelData,testcase_log,write_exceldata
 from Config import config
+sys.path.append(r"D:\project\cailanzi")
 
 data_list = readExcelData.excel_to_list(config.api_data_path,config.sh4) #获取表4的所有数据
 

@@ -1,5 +1,6 @@
-import os
+import os,sys
 from  Config import config
+sys.path.append(r"D:\project\cailanzi")
 
 
 def getNewPath(file_dir): #输入文件的目录

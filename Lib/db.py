@@ -1,6 +1,6 @@
-import pymysql,logging  #导入pymysql包
+import pymysql,logging,sys  #导入pymysql包
 from Config import config
-
+sys.path.append(r"D:\project\cailanzi")
 #建立数据库连接
 class DB():
     def __init__(self):

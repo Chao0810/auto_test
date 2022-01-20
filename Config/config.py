@@ -1,5 +1,6 @@
 #配置Log的相关信息
-import logging,os,time
+import logging,os,time,sys
+sys.path.append(r"D:\project\cailanzi")
 
 
 #连接数据库的信息

@@ -1,5 +1,6 @@
-import json
+import json,sys
 from Config import config
+sys.path.append(r"D:\project\cailanzi")
 
 def TestCase_Log(case_name,url,data,expect_res,res_text):
     if isinstance(data,dict):

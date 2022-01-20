@@ -1,12 +1,13 @@
 '''
 Python中发送邮件需要通过Email的smtp服务发送。首先需要确认用来发送邮件的邮箱是否启用了smtp服务
 '''
-import smtplib,os,logging  #用于建立smtp连接
+import smtplib,os,sys #用于建立smtp连接
 from email.mime.text import MIMEText  #邮件需要专门的MIME格式
 from email.mime.multipart import MIMEMultipart  #混合MIME格式，支持上传附件
 from email.header import Header  #用于使用中文邮件主题
 from Config import config
 from Lib import get_newpath
+sys.path.append(r"D:\project\cailanzi")
 
 def sendEmail(new_report_file,new_log_file):
 

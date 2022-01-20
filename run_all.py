@@ -1,8 +1,9 @@
-import logging,unittest,time
+import logging,unittest,time,sys
 from Config import config
 from BeautifulReport import BeautifulReport #适合直接在本地看，美观
 from HTMLTestRunner import HTMLTestRunner #适合发邮件用，该有的都有
 from Lib import send_email,get_newpath
+sys.path.append(r"D:\project\cailanzi")
 
 if __name__ == "__main__":
     logging.info("=============测试开始=============")
@@ -18,4 +19,5 @@ if __name__ == "__main__":
     new_log_file = get_newpath.getNewPath(config.log_dir)
     #发送邮件
     send_email.sendEmail(new_report_file,new_log_file)
+
 

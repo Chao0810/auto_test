@@ -1,6 +1,7 @@
-import unittest,logging,json,requests,ddt
+import unittest,logging,json,requests,ddt,sys
 from Config import config
 from Lib import readExcelData,testcase_log,write_exceldata
+sys.path.append(r"D:\project\cailanzi")
 
 
 data_list = readExcelData.getExceldata(config.api_data_path,config.sh1) #得到sh1的全部数据，由一个个字典构成的大列表
