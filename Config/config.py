@@ -30,7 +30,7 @@ smtp_user = "2510704230@qq.com"
 smtp_password = "joxcjoscinssdihd"
 
 sender = smtp_user #发件人
-receiver = ["2510704230@qq.com"] #["2510704230@qq.com","2637188236@qq.com"] #收件人,以列表存放
+receiver = ["2510704230@qq.com"]  #["1425719416@qq.com","2510704230@qq.com"] #["2510704230@qq.com","2637188236@qq.com"] #收件人,以列表存放
 subject = "菜篮子接口测试报告"  #邮件主题
 
 
@@ -53,13 +53,16 @@ report_dir = os.path.join(prj_path,"Report")
 #存放测试报告的路径（适用于HTMLTestRunner以及发邮件）
 HTML_filename = report_dir+"\\"+time.strftime("%Y-%m-%d %H_%M_%S")+"_ApiTestReport.html"
 
+'''
 #配置log格式
 logging.basicConfig(level = logging.DEBUG, #log级别
                     format = "[%(asctime)s] %(levelname)s [%(funcName)s %(filename)s %(lineno)d] %(message)s", #log格式
                     datefmt = "%Y-%m-%d %H:%M:%S",  #日期格式
-                    filename = log_dir+"\\"+time.strftime("%Y-%m-%d %H_%M_%S")+"_log.txt", #日志输出文件
+                    #filename = config.log_dir+"\\"+time.strftime("%Y-%m-%d %H_%M_%S")+"_log.txt", #日志输出文件
+                    filename = "log.txt",
                     filemode = "w" ##模式，有w和a，w就是写模式，每次都会重新写日志，覆盖之前的日志;a是追加模式，默认如果不写的话，就是追加模式
 )
+'''
 
 
 

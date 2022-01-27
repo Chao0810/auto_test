@@ -4,6 +4,7 @@ from Config import config
 sys.path.append(r"D:\project\cailanzi")
 
 data_list = readExcelData.excel_to_list(config.api_data_path,config.sh4) #获取表4的所有数据
+logger = logging.getLogger(__name__)
 
 @ddt.ddt()
 @unittest.skip

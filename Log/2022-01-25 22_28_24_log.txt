@@ -1,0 +1,78 @@
+[2022-01-25 22:28:24,173] INFO [setUpClass testcase_01_login.py 15] Login接口用例页开始
+[2022-01-25 22:28:24,216] DEBUG [_new_conn connectionpool.py 221] Starting new HTTP connection (1): 192.168.107.135:80
+[2022-01-25 22:28:25,257] DEBUG [_make_request connectionpool.py 428] http://192.168.107.135:80 "GET /freshO2O/login.action?account=admin&password=admin HTTP/1.1" 200 75
+[2022-01-25 22:28:25,272] INFO [TestCase_Log testcase_log.py 8] 测试用例：Login_para_nomal
+[2022-01-25 22:28:25,272] INFO [TestCase_Log testcase_log.py 9] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-25 22:28:25,272] INFO [TestCase_Log testcase_log.py 10] 请求参数：{"account":"admin","password":"admin"}
+[2022-01-25 22:28:25,272] INFO [TestCase_Log testcase_log.py 11] 期望结果：{"result": "ok"}
+[2022-01-25 22:28:25,272] INFO [TestCase_Log testcase_log.py 12] 实际结果：{"account":"admin","addr":null,"msg":null,"password":"admin","result":"ok"}
+[2022-01-25 22:28:25,273] INFO [testLogin testcase_01_login.py 24] 测试结果为Pass
+[2022-01-25 22:28:25,531] DEBUG [_new_conn connectionpool.py 221] Starting new HTTP connection (1): 192.168.107.135:80
+[2022-01-25 22:28:25,548] DEBUG [_make_request connectionpool.py 428] http://192.168.107.135:80 "GET /freshO2O/login.action?account=admin&password=admin&result=error HTTP/1.1" 200 75
+[2022-01-25 22:28:25,550] INFO [TestCase_Log testcase_log.py 8] 测试用例：Login_para_mix
+[2022-01-25 22:28:25,551] INFO [TestCase_Log testcase_log.py 9] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-25 22:28:25,551] INFO [TestCase_Log testcase_log.py 10] 请求参数：{"account":"admin","password":"admin","result":"error"}
+[2022-01-25 22:28:25,551] INFO [TestCase_Log testcase_log.py 11] 期望结果：{"result": "error"}
+[2022-01-25 22:28:25,551] INFO [TestCase_Log testcase_log.py 12] 实际结果：{"account":"admin","addr":null,"msg":null,"password":"admin","result":"ok"}
+[2022-01-25 22:28:25,552] INFO [testLogin testcase_01_login.py 27] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-01-25 22:28:25,631] DEBUG [_new_conn connectionpool.py 221] Starting new HTTP connection (1): 192.168.107.135:80
+[2022-01-25 22:28:25,650] DEBUG [_make_request connectionpool.py 428] http://192.168.107.135:80 "GET /freshO2O/login.action?account=admin&password=123456 HTTP/1.1" 200 92
+[2022-01-25 22:28:25,651] INFO [TestCase_Log testcase_log.py 8] 测试用例：Login_para_type
+[2022-01-25 22:28:25,651] INFO [TestCase_Log testcase_log.py 9] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-25 22:28:25,652] INFO [TestCase_Log testcase_log.py 10] 请求参数：{"account":"admin","password":123456}
+[2022-01-25 22:28:25,652] INFO [TestCase_Log testcase_log.py 11] 期望结果：{"result": "error"}
+[2022-01-25 22:28:25,652] INFO [TestCase_Log testcase_log.py 12] 实际结果：{"account":"admin","addr":null,"msg":"密码不正确","password":"123456","result":"error"}
+[2022-01-25 22:28:25,652] INFO [testLogin testcase_01_login.py 24] 测试结果为Pass
+[2022-01-25 22:28:25,741] DEBUG [_new_conn connectionpool.py 221] Starting new HTTP connection (1): 192.168.107.135:80
+[2022-01-25 22:28:25,767] DEBUG [_make_request connectionpool.py 428] http://192.168.107.135:80 "GET /freshO2O/login.action?account=adminadminadminadmin&password=admin HTTP/1.1" 200 109
+[2022-01-25 22:28:25,768] INFO [TestCase_Log testcase_log.py 8] 测试用例：Login_para_len
+[2022-01-25 22:28:25,769] INFO [TestCase_Log testcase_log.py 9] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-25 22:28:25,769] INFO [TestCase_Log testcase_log.py 10] 请求参数：{"account":"adminadminadminadmin","password":"admin"}
+[2022-01-25 22:28:25,769] INFO [TestCase_Log testcase_log.py 11] 期望结果：{"result": "error"}
+[2022-01-25 22:28:25,769] INFO [TestCase_Log testcase_log.py 12] 实际结果：{"account":"adminadminadminadmin","addr":null,"msg":"账户名不存在","password":"admin","result":"error"}
+[2022-01-25 22:28:25,770] INFO [testLogin testcase_01_login.py 24] 测试结果为Pass
+[2022-01-25 22:28:25,822] DEBUG [_new_conn connectionpool.py 221] Starting new HTTP connection (1): 192.168.107.135:80
+[2022-01-25 22:28:25,843] DEBUG [_make_request connectionpool.py 428] http://192.168.107.135:80 "GET /freshO2O/login.action?account=admin HTTP/1.1" 200 91
+[2022-01-25 22:28:25,844] INFO [TestCase_Log testcase_log.py 8] 测试用例：Login_para_opposite
+[2022-01-25 22:28:25,845] INFO [TestCase_Log testcase_log.py 9] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-25 22:28:25,845] INFO [TestCase_Log testcase_log.py 10] 请求参数：{"account":"admin"}
+[2022-01-25 22:28:25,845] INFO [TestCase_Log testcase_log.py 11] 期望结果：{"result": "error"}
+[2022-01-25 22:28:25,845] INFO [TestCase_Log testcase_log.py 12] 实际结果：{"account":"admin","addr":null,"msg":"账户名不存在","password":"admin","result":"ok"}
+[2022-01-25 22:28:25,846] INFO [testLogin testcase_01_login.py 27] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-01-25 22:28:25,895] DEBUG [_new_conn connectionpool.py 221] Starting new HTTP connection (1): 192.168.107.135:80
+[2022-01-25 22:28:25,918] DEBUG [_make_request connectionpool.py 428] http://192.168.107.135:80 "GET /freshO2O/login.action?password=admin HTTP/1.1" 200 91
+[2022-01-25 22:28:25,919] INFO [TestCase_Log testcase_log.py 8] 测试用例：Login_bypass_ui
+[2022-01-25 22:28:25,920] INFO [TestCase_Log testcase_log.py 9] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-25 22:28:25,920] INFO [TestCase_Log testcase_log.py 10] 请求参数：{"password":"admin"}
+[2022-01-25 22:28:25,920] INFO [TestCase_Log testcase_log.py 11] 期望结果：{"result": "error"}
+[2022-01-25 22:28:25,920] INFO [TestCase_Log testcase_log.py 12] 实际结果：{"account":"admin","addr":null,"msg":"账户名不存在","password":"admin","result":"ok"}
+[2022-01-25 22:28:25,921] INFO [testLogin testcase_01_login.py 27] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-01-25 22:28:25,975] DEBUG [_new_conn connectionpool.py 221] Starting new HTTP connection (1): 192.168.107.135:80
+[2022-01-25 22:28:25,988] DEBUG [_make_request connectionpool.py 428] http://192.168.107.135:80 "GET /freshO2O/login.action?account=hc&password=admin HTTP/1.1" 200 91
+[2022-01-25 22:28:25,989] INFO [TestCase_Log testcase_log.py 8] 测试用例：Login_bypass_auth
+[2022-01-25 22:28:25,989] INFO [TestCase_Log testcase_log.py 9] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-25 22:28:25,989] INFO [TestCase_Log testcase_log.py 10] 请求参数：{"account":"hc","password":"admin"}
+[2022-01-25 22:28:25,989] INFO [TestCase_Log testcase_log.py 11] 期望结果：{"result": "error"}
+[2022-01-25 22:28:25,989] INFO [TestCase_Log testcase_log.py 12] 实际结果：{"account":"hc","addr":null,"msg":"账户名不存在","password":"admin","result":"error"}
+[2022-01-25 22:28:25,990] INFO [testLogin testcase_01_login.py 24] 测试结果为Pass
+[2022-01-25 22:28:26,051] DEBUG [_new_conn connectionpool.py 221] Starting new HTTP connection (1): 192.168.107.135:80
+[2022-01-25 22:28:26,083] DEBUG [_make_request connectionpool.py 428] http://192.168.107.135:80 "GET /freshO2O/login.action?account=lisi&password=lisi HTTP/1.1" 200 105
+[2022-01-25 22:28:26,084] INFO [TestCase_Log testcase_log.py 8] 测试用例：Login_business_logic
+[2022-01-25 22:28:26,085] INFO [TestCase_Log testcase_log.py 9] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-25 22:28:26,085] INFO [TestCase_Log testcase_log.py 10] 请求参数：{"account":"admin","password":"admin","account":"lisi","password":"lisi"}
+[2022-01-25 22:28:26,085] INFO [TestCase_Log testcase_log.py 11] 期望结果：{"result": "error"}
+[2022-01-25 22:28:26,085] INFO [TestCase_Log testcase_log.py 12] 实际结果：{"account":"lisi","addr":"广州市黄埔区","msg":"账户名不存在","password":"lisi","result":"ok"}
+[2022-01-25 22:28:26,086] INFO [testLogin testcase_01_login.py 27] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-01-25 22:28:26,145] INFO [tearDownClass testcase_01_login.py 36] Login接口用例页结束

@@ -1,0 +1,104 @@
+[2022-01-25 23:46:36,879] INFO [setUpClass testcase_03_queryReceiveAddr.py 14] queryReceiveAddr�[2022-01-25 23:46:37,517] INFO [<module> run_all.py 18] =============测试结束=============
+iveAddr.py 27] 测试结果为Pass
+[2022-01-25 23:46:37,068] INFO [testQueryReceiveAddr testcase_03_queryReceiveAddr.py 30] 测试结果为Fail,具体原因是：'ok' != 'fail'
+- ok
++ fail
+ : 断言失败
+[2022-01-25 23:46:37,190] INFO [testQueryReceiveAddr testcase_03_queryReceiveAddr.py 27] 测试结果为Pass
+[2022-01-25 23:46:37,305] INFO [testQueryReceiveAddr testcase_03_queryReceiveAddr.py 27] 测试结果为Pass
+[2022-01-25 23:46:37,442] INFO [testQueryReceiveAddr testcase_03_queryReceiveAddr.py 30] 测试结果为Fail,具体原因是：'ok' != 'fail'
+- ok
++ fail
+ : 断言失败
+[2022-01-25 23:46:37,506] INFO [tearDownClass testcase_03_queryReceiveAddr.py 38] queryReceiveAddr接口测试页结束
+1-25 23:46:35,721] INFO [testLogin testcase_01_login.py 27] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-01-25 23:46:35,780] INFO [tearDownClass testcase_01_login.py 36] Login接口用例页结束
+dr":null,"msg":"账户名不存在","password":"admin","result":"ok"}
+[2022-01-25 23:46:35,008] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_type
+[2022-01-25 23:46:35,009] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-25 23:46:35,009] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin","password":123456}
+[2022-01-25 23:46:35,010] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-01-25 23:46:35,011] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":"密码不正确","password":"123456","result":"error"}
+[2022-01-25 23:46:35,145] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_len
+[2022-01-25 23:46:35,145] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-25 23:46:35,146] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"adminadminadminadmin","password":"admin"}
+[2022-01-25 23:46:35,146] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-01-25 23:46:35,146] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"adminadminadminadmin","addr":null,"msg":"账户名不存在","password":"admin","result":"error"}
+[2022-01-25 23:46:35,272] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_opposite
+[2022-01-25 23:46:35,272] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-25 23:46:35,273] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin"}
+[2022-01-25 23:46:35,273] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-01-25 23:46:35,273] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":"账户名不存在","password":"admin","result":"ok"}
+[2022-01-25 23:46:35,461] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_bypass_ui
+[2022-01-25 23:46:35,462] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-25 23:46:35,462] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"password":"admin"}
+[2022-01-25 23:46:35,462] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-01-25 23:46:35,463] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":"账户名不存在","password":"admin","result":"ok"}
+[2022-01-25 23:46:35,590] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_bypass_auth
+[2022-01-25 23:46:35,590] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-25 23:46:35,590] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc","password":"admin"}
+[2022-01-25 23:46:35,591] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-01-25 23:46:35,591] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc","addr":null,"msg":"账户名不存在","password":"admin","result":"error"}
+[2022-01-25 23:46:35,720] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_business_logic
+[2022-01-25 23:46:35,720] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-25 23:46:35,720] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin","password":"admin","account":"lisi","password":"lisi"}
+[2022-01-25 23:46:35,720] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-01-25 23:46:35,721] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"lisi","addr":"广州市黄埔区","msg":"账户名不存在","password":"lisi","result":"ok"}
+[2022-01-25 23:46:35,977] INFO [TestCase_Log testcase_log.py 9] 测试用例：Register_para_nomal
+[2022-01-25 23:46:35,977] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/userAdd.action
+[2022-01-25 23:46:35,978] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc","password":"hc66666","phone":"13349678458","addr":"深圳市南山区沙河街道"}
+[2022-01-25 23:46:35,978] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-01-25 23:46:35,978] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc","addr":"深圳市南山区沙河街道","birthday":null,"email":null,"id":0,"integrate":0,"msg":"","nickname":"hc2","password":"hc66666","phone":"13349678458","result":"ok"}
+[2022-01-25 23:46:36,115] INFO [TestCase_Log testcase_log.py 9] 测试用例：Register_para_mix
+[2022-01-25 23:46:36,115] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/userAdd.action
+[2022-01-25 23:46:36,115] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc2","password":"hc66666","nickname":"hc2","addr":"深圳市南山区沙河街道"}
+[2022-01-25 23:46:36,115] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-01-25 23:46:36,116] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc2","addr":"深圳市南山区沙河街道","birthday":null,"email":null,"id":0,"integrate":0,"msg":"账户名已经存在！","nickname":"hc2","password":"hc66666","phone":"13349678458","result":"fail"}
+[2022-01-25 23:46:36,329] INFO [TestCase_Log testcase_log.py 9] 测试用例：Register_para_len
+[2022-01-25 23:46:36,330] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/userAdd.action
+[2022-01-25 23:46:36,331] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc4","password":"hc66666","phone":"158735667527356675273566752","addr":"深圳市南山区沙河街道"}
+[2022-01-25 23:46:36,331] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-01-25 23:46:36,332] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc4","addr":"深圳市南山区沙河街道","birthday":null,"email":null,"id":0,"integrate":0,"msg":"非法的电话号码！","nickname":"hc2","password":"hc66666","phone":"158735667527356675273566752","result":"fail"}
+[2022-01-25 23:46:36,492] INFO [TestCase_Log testcase_log.py 9] 测试用例：Register_bypass_ui
+[2022-01-25 23:46:36,493] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/userAdd.action
+[2022-01-25 23:46:36,493] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc5","password":"hc66666","phone":"-15873566752","addr":"深圳市南山区沙河街道"}
+[2022-01-25 23:46:36,493] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-01-25 23:46:36,493] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc5","addr":"深圳市南山区沙河街道","birthday":null,"email":null,"id":0,"integrate":0,"msg":"非法的电话号码！","nickname":"hc2","password":"hc66666","phone":"-15873566752","result":"fail"}
+[2022-01-25 23:46:36,703] INFO [TestCase_Log testcase_log.py 9] 测试用例：Register_bypass_auth
+[2022-01-25 23:46:36,704] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/userAdd.action
+[2022-01-25 23:46:36,704] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc3","password":"admin","addr":"深圳市南山区沙河街道"}
+[2022-01-25 23:46:36,704] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-01-25 23:46:36,705] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc3","addr":"深圳市南山区沙河街道","birthday":null,"email":null,"id":0,"integrate":0,"msg":"密码至少需要6位字符！","nickname":"hc2","password":"admin","phone":"-15873566752","result":"fail"}
+[2022-01-25 23:46:36,833] INFO [TestCase_Log testcase_log.py 9] 测试用例：Register_business_logic
+[2022-01-25 23:46:36,833] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/userAdd.action
+[2022-01-25 23:46:36,833] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc6","password":"hc66666","phone":"15873566752","addr":"深圳市南山区沙河街道","phone":"15873566752"}
+[2022-01-25 23:46:36,834] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-01-25 23:46:36,834] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc6","addr":"深圳市南山区沙河街道","birthday":null,"email":null,"id":0,"integrate":0,"msg":"非法的电话号码！","nickname":"hc2","password":"hc66666","phone":"15873566752","result":"fail"}
+[2022-01-25 23:46:36,941] INFO [TestCase_Log testcase_log.py 9] 测试用例：queryReceiveAddr_para_nomal
+[2022-01-25 23:46:36,941] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/receiveaddrSelect.action
+[2022-01-25 23:46:36,941] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"username":"admin"}
+[2022-01-25 23:46:36,941] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-01-25 23:46:36,941] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"gotoPage":0,"list":[{"account":"admin","address":"深圳市宝安区中南花园","defaultaddr":"深圳市宝安区中南花园","id":1,"phone":"18923680916","username":"amin"}],"msg":"","pageCount":5000,"pageIndex":1,"result":"ok","totalCount":115,"totalPage":1,"username":"admin"}
+[2022-01-25 23:46:37,067] INFO [TestCase_Log testcase_log.py 9] 测试用例：queryReceiveAddr_para_mix
+[2022-01-25 23:46:37,068] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/receiveaddrSelect.action
+[2022-01-25 23:46:37,068] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"username":"admin","msg":"查询到0条记录！"}
+[2022-01-25 23:46:37,068] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-01-25 23:46:37,068] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"gotoPage":0,"list":[{"account":"admin","address":"深圳市宝安区中南花园","defaultaddr":"深圳市宝安区中南花园","id":1,"phone":"18923680916","username":"amin"}],"msg":"","pageCount":5000,"pageIndex":1,"result":"ok","totalCount":115,"totalPage":1,"username":"admin"}
+[2022-01-25 23:46:37,190] INFO [TestCase_Log testcase_log.py 9] 测试用例：queryReceiveAddr_para_type
+[2022-01-25 23:46:37,190] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/receiveaddrSelect.action
+[2022-01-25 23:46:37,190] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"username":66}
+[2022-01-25 23:46:37,190] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-01-25 23:46:37,190] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"gotoPage":0,"list":[],"msg":"查询到0条记录！","pageCount":5000,"pageIndex":1,"result":"fail","totalCount":115,"totalPage":1,"username":"66"}
+[2022-01-25 23:46:37,304] INFO [TestCase_Log testcase_log.py 9] 测试用例：queryReceiveAddr_para_len
+[2022-01-25 23:46:37,305] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/receiveaddrSelect.action
+[2022-01-25 23:46:37,305] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"username":"adminadminadminadminadminadminadmin"}
+[2022-01-25 23:46:37,305] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-01-25 23:46:37,305] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"gotoPage":0,"list":[],"msg":"查询到0条记录！","pageCount":5000,"pageIndex":1,"result":"fail","totalCount":115,"totalPage":1,"username":"adminadminadminadminadminadminadmin"}
+[2022-01-25 23:46:37,441] INFO [TestCase_Log testcase_log.py 9] 测试用例：queryReceiveAddr_business_logic
+[2022-01-25 23:46:37,442] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/receiveaddrSelect.action
+[2022-01-25 23:46:37,442] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"username":"admin","username":"admin"}
+[2022-01-25 23:46:37,442] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-01-25 23:46:37,442] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"gotoPage":0,"list":[{"account":"admin","address":"深圳市宝安区中南花园","defaultaddr":"深圳市宝安区中南花园","id":1,"phone":"18923680916","username":"amin"}],"msg":"","pageCount":5000,"pageIndex":1,"result":"ok","totalCount":115,"totalPage":1,"username":"admin"}

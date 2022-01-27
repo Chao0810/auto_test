@@ -1,0 +1,52 @@
+[2022-01-26 00:20:11,300] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_nomal[2022-01-26 00:20:11,301] INFO [testLogin testcase_01_login.py 24] 测试结果为Pass
+[2022-01-26 00:20:11,366] INFO [testLogin testcase_01_login.py 27] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-01-26 00:20:11,432] INFO [testLogin testcase_01_login.py 24] 测试结果为Pass
+[2022-01-26 00:20:11,507] INFO [testLogin testcase_01_login.py 24] 测试结果为Pass
+[2022-01-26 00:20:11,583] INFO [testLogin testcase_01_login.py 27] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-01-26 00:20:11,671] INFO [testLogin testcase_01_login.py 27] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-01-26 00:20:11,744] INFO [testLogin testcase_01_login.py 24] 测试结果为Pass
+[2022-01-26 00:20:11,812] INFO [testLogin testcase_01_login.py 27] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-01-26 00:20:11,863] INFO [tearDownClass testcase_01_login.py 36] Login接口用例页结束
+dr":null,"msg":"账户名不存在","password":"admin","result":"ok"}
+[2022-01-26 00:20:11,432] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_type
+[2022-01-26 00:20:11,432] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-26 00:20:11,432] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin","password":123456}
+[2022-01-26 00:20:11,432] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-01-26 00:20:11,432] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":"密码不正确","password":"123456","result":"error"}
+[2022-01-26 00:20:11,506] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_len
+[2022-01-26 00:20:11,506] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-26 00:20:11,506] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"adminadminadminadmin","password":"admin"}
+[2022-01-26 00:20:11,506] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-01-26 00:20:11,507] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"adminadminadminadmin","addr":null,"msg":"账户名不存在","password":"admin","result":"error"}
+[2022-01-26 00:20:11,582] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_opposite
+[2022-01-26 00:20:11,582] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-26 00:20:11,582] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin"}
+[2022-01-26 00:20:11,583] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-01-26 00:20:11,583] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":"账户名不存在","password":"admin","result":"ok"}
+[2022-01-26 00:20:11,669] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_bypass_ui
+[2022-01-26 00:20:11,670] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-26 00:20:11,670] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"password":"admin"}
+[2022-01-26 00:20:11,670] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-01-26 00:20:11,670] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":"账户名不存在","password":"admin","result":"ok"}
+[2022-01-26 00:20:11,743] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_bypass_auth
+[2022-01-26 00:20:11,743] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-26 00:20:11,744] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc","password":"admin"}
+[2022-01-26 00:20:11,744] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-01-26 00:20:11,744] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc","addr":null,"msg":"账户名不存在","password":"admin","result":"error"}
+[2022-01-26 00:20:11,811] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_business_logic
+[2022-01-26 00:20:11,812] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-01-26 00:20:11,812] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin","password":"admin","account":"lisi","password":"lisi"}
+[2022-01-26 00:20:11,812] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-01-26 00:20:11,812] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"lisi","addr":"广州市黄埔区","msg":"账户名不存在","password":"lisi","result":"ok"}
