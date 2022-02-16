@@ -27,7 +27,7 @@ sh9 = "finishOrder"
 smtp_server = "smtp.qq.com"
 smtp_port = 465
 smtp_user = "2510704230@qq.com"
-smtp_password = "joxcjoscinssdihd"
+smtp_password = "gkpajutiyrtwdjdj"   #"joxcjoscinssdihd"
 
 sender = smtp_user #发件人
 receiver = ["2510704230@qq.com"]  #["1425719416@qq.com","2510704230@qq.com"] #["2510704230@qq.com","2637188236@qq.com"] #收件人,以列表存放
@@ -63,7 +63,7 @@ logging.basicConfig(level = logging.DEBUG, #log级别
                     filemode = "w" ##模式，有w和a，w就是写模式，每次都会重新写日志，覆盖之前的日志;a是追加模式，默认如果不写的话，就是追加模式
 )
 '''
-
-
+if __name__ == '__main__':
+    print(os.getcwd())
 
 

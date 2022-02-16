@@ -1,0 +1,32 @@
+[2022-02-16 22:52:04,400] INFO [setUpClass testcase_09_finishOrder.py 15] finishOrder接口用例页开始
+[2022-02-16 22:52:04,746] INFO [TestCase_Log testcase_log.py 9] 测试用例：finishOrder_para_nomal
+[2022-02-16 22:52:04,747] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 22:52:04,747] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "state": "3", "gotoPage": "0"}
+[2022-02-16 22:52:04,747] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 22:52:04,747] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":"操作成功","result":"fail","state":3}
+[2022-02-16 22:52:04,748] INFO [testselectOrder testcase_09_finishOrder.py 48] 断言异常，测试结果为Fail
+[2022-02-16 22:52:04,880] INFO [TestCase_Log testcase_log.py 9] 测试用例：finishOrder_para_mix
+[2022-02-16 22:52:04,880] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 22:52:04,880] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "msg": "操作成功", "state": "3", "gotoPage": "0"}
+[2022-02-16 22:52:04,880] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 22:52:04,880] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":"操作成功","result":"fail","state":3}
+[2022-02-16 22:52:04,881] INFO [testselectOrder testcase_09_finishOrder.py 48] 断言异常，测试结果为Fail
+[2022-02-16 22:52:04,945] INFO [TestCase_Log testcase_log.py 9] 测试用例：finishOrder_bypass_ui
+[2022-02-16 22:52:04,946] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 22:52:04,946] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "state": "3", "gotoPage": "-2"}
+[2022-02-16 22:52:04,946] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 22:52:04,946] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":"操作成功","result":"fail","state":3}
+[2022-02-16 22:52:04,947] INFO [testselectOrder testcase_09_finishOrder.py 45] 测试结果为Pass
+[2022-02-16 22:52:05,028] INFO [TestCase_Log testcase_log.py 9] 测试用例：finishOrder_para_opposite
+[2022-02-16 22:52:05,029] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 22:52:05,029] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "gotoPage": "0"}
+[2022-02-16 22:52:05,029] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 22:52:05,029] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":"操作成功","result":"fail","state":3}
+[2022-02-16 22:52:05,031] INFO [testselectOrder testcase_09_finishOrder.py 45] 测试结果为Pass
+[2022-02-16 22:52:05,096] INFO [TestCase_Log testcase_log.py 9] 测试用例：finishOrder_business_logic
+[2022-02-16 22:52:05,097] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 22:52:05,097] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "state": "2", "gotoPage": "-1"}
+[2022-02-16 22:52:05,097] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 22:52:05,097] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":"操作成功","result":"fail","state":2}
+[2022-02-16 22:52:05,098] INFO [testselectOrder testcase_09_finishOrder.py 45] 测试结果为Pass
+[2022-02-16 22:52:05,164] INFO [tearDownClass testcase_09_finishOrder.py 21] finishOrder接口用例页结束

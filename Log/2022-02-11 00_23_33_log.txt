@@ -1,0 +1,2 @@
+[2022-02-11 00:23:33,764] INFO [setUpClass testcase_06_addOrder.py 14] addOrder接口用例页开始
+[2022-02-11 00:23:34,037] INFO [tearDownClass testcase_06_addOrder.py 18] addOrder接口用例页结束

@@ -1,0 +1,276 @@
+[2022-02-16 23:02:11,237] INFO [<module> run_all.py 11] =============测试开始=============
+[2022-02-16 23:02:11,619] INFO [setUpClass testcase_01_login.py 15] Login接口用例页开始
+[2022-02-16 23:02:11,714] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_nomal
+[2022-02-16 23:02:11,715] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-16 23:02:11,715] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin","password":"admin"}
+[2022-02-16 23:02:11,716] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "ok"}
+[2022-02-16 23:02:11,716] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":"账户名不存在","password":"admin","result":"ok"}
+[2022-02-16 23:02:11,717] INFO [testLogin testcase_01_login.py 27] 测试结果为Pass
+[2022-02-16 23:02:11,797] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_mix
+[2022-02-16 23:02:11,797] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-16 23:02:11,797] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin","password":"admin","result":"error"}
+[2022-02-16 23:02:11,797] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "ok"}
+[2022-02-16 23:02:11,798] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":"账户名不存在","password":"admin","result":"ok"}
+[2022-02-16 23:02:11,798] INFO [testLogin testcase_01_login.py 27] 测试结果为Pass
+[2022-02-16 23:02:11,858] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_type
+[2022-02-16 23:02:11,858] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-16 23:02:11,858] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin","password":123456}
+[2022-02-16 23:02:11,858] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-02-16 23:02:11,858] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":"密码不正确","password":"123456","result":"error"}
+[2022-02-16 23:02:11,858] INFO [testLogin testcase_01_login.py 27] 测试结果为Pass
+[2022-02-16 23:02:11,921] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_len
+[2022-02-16 23:02:11,921] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-16 23:02:11,921] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"adminadminadminadmin","password":"admin"}
+[2022-02-16 23:02:11,922] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-02-16 23:02:11,922] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"adminadminadminadmin","addr":null,"msg":"账户名不存在","password":"admin","result":"error"}
+[2022-02-16 23:02:11,922] INFO [testLogin testcase_01_login.py 27] 测试结果为Pass
+[2022-02-16 23:02:11,984] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_opposite
+[2022-02-16 23:02:11,984] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-16 23:02:11,984] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin"}
+[2022-02-16 23:02:11,984] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-02-16 23:02:11,984] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":"账户名不存在","password":"admin","result":"ok"}
+[2022-02-16 23:02:11,985] INFO [testLogin testcase_01_login.py 30] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-02-16 23:02:12,048] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_bypass_ui
+[2022-02-16 23:02:12,048] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-16 23:02:12,048] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"password":"admin"}
+[2022-02-16 23:02:12,048] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-02-16 23:02:12,049] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":"账户名不存在","password":"admin","result":"ok"}
+[2022-02-16 23:02:12,049] INFO [testLogin testcase_01_login.py 30] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-02-16 23:02:12,112] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_bypass_auth
+[2022-02-16 23:02:12,112] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-16 23:02:12,113] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc","password":"admin"}
+[2022-02-16 23:02:12,113] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-02-16 23:02:12,113] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc","addr":null,"msg":"账户名不存在","password":"admin","result":"error"}
+[2022-02-16 23:02:12,113] INFO [testLogin testcase_01_login.py 27] 测试结果为Pass
+[2022-02-16 23:02:12,174] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_business_logic
+[2022-02-16 23:02:12,174] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-16 23:02:12,175] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin","password":"admin","account":"lisi","password":"lisi"}
+[2022-02-16 23:02:12,175] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-02-16 23:02:12,175] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"lisi","addr":"广州市黄埔区","msg":"账户名不存在","password":"lisi","result":"ok"}
+[2022-02-16 23:02:12,175] INFO [testLogin testcase_01_login.py 30] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-02-16 23:02:12,219] INFO [tearDownClass testcase_01_login.py 19] Login接口用例页结束
+[2022-02-16 23:02:12,220] INFO [setUpClass testcase_02_register.py 14] Register接口用例页开始
+[2022-02-16 23:02:12,316] INFO [TestCase_Log testcase_log.py 9] 测试用例：Register_para_nomal
+[2022-02-16 23:02:12,316] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/userAdd.action
+[2022-02-16 23:02:12,316] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc","password":"hc66666","phone":"13349678458","addr":"深圳市南山区沙河街道"}
+[2022-02-16 23:02:12,317] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 23:02:12,317] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc","addr":"深圳市南山区沙河街道","birthday":null,"email":null,"id":0,"integrate":0,"msg":"","nickname":"hc2","password":"hc66666","phone":"13349678458","result":"ok"}
+[2022-02-16 23:02:12,319] INFO [testRegister testcase_02_register.py 38] 测试结果为Pass
+[2022-02-16 23:02:12,430] INFO [TestCase_Log testcase_log.py 9] 测试用例：Register_para_mix
+[2022-02-16 23:02:12,430] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/userAdd.action
+[2022-02-16 23:02:12,431] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc2","password":"hc66666","nickname":"hc2","addr":"深圳市南山区沙河街道"}
+[2022-02-16 23:02:12,431] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 23:02:12,431] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc2","addr":"深圳市南山区沙河街道","birthday":null,"email":null,"id":0,"integrate":0,"msg":"","nickname":"hc2","password":"hc66666","phone":"13349678458","result":"ok"}
+[2022-02-16 23:02:12,432] INFO [testRegister testcase_02_register.py 38] 测试结果为Pass
+[2022-02-16 23:02:12,545] INFO [TestCase_Log testcase_log.py 9] 测试用例：Register_para_len
+[2022-02-16 23:02:12,545] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/userAdd.action
+[2022-02-16 23:02:12,545] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc4","password":"hc66666","phone":"158735667527356675273566752","addr":"深圳市南山区沙河街道"}
+[2022-02-16 23:02:12,545] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:12,546] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc4","addr":"深圳市南山区沙河街道","birthday":null,"email":null,"id":0,"integrate":0,"msg":"非法的电话号码！","nickname":"hc2","password":"hc66666","phone":"158735667527356675273566752","result":"fail"}
+[2022-02-16 23:02:12,547] INFO [testRegister testcase_02_register.py 43] 测试结果为Pass
+[2022-02-16 23:02:12,671] INFO [TestCase_Log testcase_log.py 9] 测试用例：Register_bypass_ui
+[2022-02-16 23:02:12,671] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/userAdd.action
+[2022-02-16 23:02:12,671] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc5","password":"hc66666","phone":"-15873566752","addr":"深圳市南山区沙河街道"}
+[2022-02-16 23:02:12,671] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:12,671] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc5","addr":"深圳市南山区沙河街道","birthday":null,"email":null,"id":0,"integrate":0,"msg":"非法的电话号码！","nickname":"hc2","password":"hc66666","phone":"-15873566752","result":"fail"}
+[2022-02-16 23:02:12,672] INFO [testRegister testcase_02_register.py 43] 测试结果为Pass
+[2022-02-16 23:02:12,764] INFO [TestCase_Log testcase_log.py 9] 测试用例：Register_bypass_auth
+[2022-02-16 23:02:12,765] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/userAdd.action
+[2022-02-16 23:02:12,765] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc3","password":"admin","addr":"深圳市南山区沙河街道"}
+[2022-02-16 23:02:12,765] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:12,765] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc3","addr":"深圳市南山区沙河街道","birthday":null,"email":null,"id":0,"integrate":0,"msg":"密码至少需要6位字符！","nickname":"hc2","password":"admin","phone":"-15873566752","result":"fail"}
+[2022-02-16 23:02:12,766] INFO [testRegister testcase_02_register.py 43] 测试结果为Pass
+[2022-02-16 23:02:12,869] INFO [TestCase_Log testcase_log.py 9] 测试用例：Register_business_logic
+[2022-02-16 23:02:12,870] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/userAdd.action
+[2022-02-16 23:02:12,870] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc6","password":"hc66666","phone":"15873566752","addr":"深圳市南山区沙河街道","phone":"15873566752"}
+[2022-02-16 23:02:12,870] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:12,870] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc6","addr":"深圳市南山区沙河街道","birthday":null,"email":null,"id":0,"integrate":0,"msg":"非法的电话号码！","nickname":"hc2","password":"hc66666","phone":"15873566752","result":"fail"}
+[2022-02-16 23:02:12,871] INFO [testRegister testcase_02_register.py 43] 测试结果为Pass
+[2022-02-16 23:02:12,918] INFO [tearDownClass testcase_02_register.py 18] Register接口用例页结束
+[2022-02-16 23:02:12,918] INFO [setUpClass testcase_03_queryReceiveAddr.py 14] queryReceiveAddr接口测试页开始
+[2022-02-16 23:02:12,950] INFO [TestCase_Log testcase_log.py 9] 测试用例：queryReceiveAddr_para_nomal
+[2022-02-16 23:02:12,950] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/receiveaddrSelect.action
+[2022-02-16 23:02:12,950] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"username":"admin"}
+[2022-02-16 23:02:12,951] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 23:02:12,951] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"gotoPage":0,"list":[{"account":"admin","address":"深圳市宝安区中南花园","defaultaddr":"深圳市宝安区中南花园","id":1,"phone":"18923680916","username":"amin"},{"account":"admin","address":null,"defaultaddr":null,"id":174,"phone":"18923680916","username":"admin"},{"account":"admin","address":null,"defaultaddr":null,"id":175,"phone":"123456","username":"admin"}],"msg":"","pageCount":5000,"pageIndex":1,"result":"ok","totalCount":174,"totalPage":1,"username":"admin"}
+[2022-02-16 23:02:12,951] INFO [testQueryReceiveAddr testcase_03_queryReceiveAddr.py 30] 测试结果为Pass
+[2022-02-16 23:02:13,074] INFO [TestCase_Log testcase_log.py 9] 测试用例：queryReceiveAddr_para_mix
+[2022-02-16 23:02:13,074] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/receiveaddrSelect.action
+[2022-02-16 23:02:13,074] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"username":"admin","msg":"查询到0条记录！"}
+[2022-02-16 23:02:13,074] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 23:02:13,074] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"gotoPage":0,"list":[{"account":"admin","address":"深圳市宝安区中南花园","defaultaddr":"深圳市宝安区中南花园","id":1,"phone":"18923680916","username":"amin"},{"account":"admin","address":null,"defaultaddr":null,"id":174,"phone":"18923680916","username":"admin"},{"account":"admin","address":null,"defaultaddr":null,"id":175,"phone":"123456","username":"admin"}],"msg":"","pageCount":5000,"pageIndex":1,"result":"ok","totalCount":174,"totalPage":1,"username":"admin"}
+[2022-02-16 23:02:13,074] INFO [testQueryReceiveAddr testcase_03_queryReceiveAddr.py 30] 测试结果为Pass
+[2022-02-16 23:02:13,175] INFO [TestCase_Log testcase_log.py 9] 测试用例：queryReceiveAddr_para_type
+[2022-02-16 23:02:13,176] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/receiveaddrSelect.action
+[2022-02-16 23:02:13,176] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"username":66}
+[2022-02-16 23:02:13,176] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:13,176] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"gotoPage":0,"list":[],"msg":"查询到0条记录！","pageCount":5000,"pageIndex":1,"result":"fail","totalCount":174,"totalPage":1,"username":"66"}
+[2022-02-16 23:02:13,176] INFO [testQueryReceiveAddr testcase_03_queryReceiveAddr.py 30] 测试结果为Pass
+[2022-02-16 23:02:13,251] INFO [TestCase_Log testcase_log.py 9] 测试用例：queryReceiveAddr_para_len
+[2022-02-16 23:02:13,251] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/receiveaddrSelect.action
+[2022-02-16 23:02:13,251] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"username":"adminadminadminadminadminadminadmin"}
+[2022-02-16 23:02:13,251] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:13,252] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"gotoPage":0,"list":[],"msg":"查询到0条记录！","pageCount":5000,"pageIndex":1,"result":"fail","totalCount":174,"totalPage":1,"username":"adminadminadminadminadminadminadmin"}
+[2022-02-16 23:02:13,252] INFO [testQueryReceiveAddr testcase_03_queryReceiveAddr.py 30] 测试结果为Pass
+[2022-02-16 23:02:13,327] INFO [TestCase_Log testcase_log.py 9] 测试用例：queryReceiveAddr_business_logic
+[2022-02-16 23:02:13,328] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/receiveaddrSelect.action
+[2022-02-16 23:02:13,328] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"username":"admin","username":"admin"}
+[2022-02-16 23:02:13,328] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:13,328] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"gotoPage":0,"list":[{"account":"admin","address":"深圳市宝安区中南花园","defaultaddr":"深圳市宝安区中南花园","id":1,"phone":"18923680916","username":"amin"},{"account":"admin","address":null,"defaultaddr":null,"id":174,"phone":"18923680916","username":"admin"},{"account":"admin","address":null,"defaultaddr":null,"id":175,"phone":"123456","username":"admin"}],"msg":"","pageCount":5000,"pageIndex":1,"result":"ok","totalCount":174,"totalPage":1,"username":"admin"}
+[2022-02-16 23:02:13,328] INFO [testQueryReceiveAddr testcase_03_queryReceiveAddr.py 33] 测试结果为Fail,具体原因是：'ok' != 'fail'
+- ok
++ fail
+ : 断言失败
+[2022-02-16 23:02:13,377] INFO [tearDownClass testcase_03_queryReceiveAddr.py 18] queryReceiveAddr接口测试页结束
+[2022-02-16 23:02:13,378] INFO [setUpClass testcase_05_selectGoodCategory.py 14] selectGoodCategory接口用例页开始
+[2022-02-16 23:02:13,448] INFO [TestCase_Log testcase_log.py 9] 测试用例：selectGoodCategory_para_nomal
+[2022-02-16 23:02:13,448] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/goodsSelectByCategory.action
+[2022-02-16 23:02:13,448] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"category_id":"3"}
+[2022-02-16 23:02:13,448] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 23:02:13,449] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"category_id":3,"list":[{"GDesc":"吃猪肉，强身健体","GDis":null,"GId":8,"GName":"猪肉","GPic":"\/upload\/20160327233002.jpg","GPrice":23.0,"GType":null,"categoryId":3,"g_count":200,"g_discount":0,"g_integration":0,"g_reco":"0"},{"GDesc":"羊肉能御风寒，又可补身体，适宜于冬季食用，故被称为冬令补品，深受人们欢迎。","GDis":null,"GId":19,"GName":"羊肉","GPic":"\/upload\/yangrou.jpg","GPrice":36.0,"GType":null,"categoryId":3,"g_count":2,"g_discount":0,"g_integration":0,"g_reco":"0"},{"GDesc":"牛肉是指从牛身上得出的肉，为常见的肉品之一。","GDis":null,"GId":20,"GName":"牛肉","GPic":"\/upload\/niurou.jpg","GPrice":48.0,"GType":null,"categoryId":3,"g_count":2,"g_discount":0,"g_integration":0,"g_reco":"0"},{"GDesc":"鸡肉不但适于热炒、炖汤，而且是比较适合冷食凉拌的肉类。","GDis":null,"GId":29,"GName":"鸡肉","GPic":"\/upload\/jirou.jpg","GPrice":16.8,"GType":null,"categoryId":3,"g_count":200,"g_discount":0,"g_integration":0,"g_reco":"0"},{"GDesc":"鸭是为餐桌上的上乘肴馔，也是人们进补的优良食品。","GDis":null,"GId":30,"GName":"鸭肉","GPic":"\/upload\/yarou.jpg","GPrice":18.8,"GType":null,"categoryId":3,"g_count":100,"g_discount":0,"g_integration":0,"g_reco":"0"}],"msg":"","result":"ok"}
+[2022-02-16 23:02:13,449] INFO [testselectGoodCategory testcase_05_selectGoodCategory.py 30] 测试结果为Pass
+[2022-02-16 23:02:13,523] INFO [TestCase_Log testcase_log.py 9] 测试用例：selectGoodCategory_para_mix
+[2022-02-16 23:02:13,523] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/goodsSelectByCategory.action
+[2022-02-16 23:02:13,523] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"category_id":"3","result":"fail"}
+[2022-02-16 23:02:13,523] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 23:02:13,523] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"category_id":3,"list":[{"GDesc":"吃猪肉，强身健体","GDis":null,"GId":8,"GName":"猪肉","GPic":"\/upload\/20160327233002.jpg","GPrice":23.0,"GType":null,"categoryId":3,"g_count":200,"g_discount":0,"g_integration":0,"g_reco":"0"},{"GDesc":"羊肉能御风寒，又可补身体，适宜于冬季食用，故被称为冬令补品，深受人们欢迎。","GDis":null,"GId":19,"GName":"羊肉","GPic":"\/upload\/yangrou.jpg","GPrice":36.0,"GType":null,"categoryId":3,"g_count":2,"g_discount":0,"g_integration":0,"g_reco":"0"},{"GDesc":"牛肉是指从牛身上得出的肉，为常见的肉品之一。","GDis":null,"GId":20,"GName":"牛肉","GPic":"\/upload\/niurou.jpg","GPrice":48.0,"GType":null,"categoryId":3,"g_count":2,"g_discount":0,"g_integration":0,"g_reco":"0"},{"GDesc":"鸡肉不但适于热炒、炖汤，而且是比较适合冷食凉拌的肉类。","GDis":null,"GId":29,"GName":"鸡肉","GPic":"\/upload\/jirou.jpg","GPrice":16.8,"GType":null,"categoryId":3,"g_count":200,"g_discount":0,"g_integration":0,"g_reco":"0"},{"GDesc":"鸭是为餐桌上的上乘肴馔，也是人们进补的优良食品。","GDis":null,"GId":30,"GName":"鸭肉","GPic":"\/upload\/yarou.jpg","GPrice":18.8,"GType":null,"categoryId":3,"g_count":100,"g_discount":0,"g_integration":0,"g_reco":"0"}],"msg":"","result":"ok"}
+[2022-02-16 23:02:13,524] INFO [testselectGoodCategory testcase_05_selectGoodCategory.py 30] 测试结果为Pass
+[2022-02-16 23:02:13,596] INFO [TestCase_Log testcase_log.py 9] 测试用例：selectGoodCategory_para_opposite
+[2022-02-16 23:02:13,597] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/goodsSelectByCategory.action
+[2022-02-16 23:02:13,597] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"result":"fail"}
+[2022-02-16 23:02:13,597] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:13,597] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"category_id":3,"list":[{"GDesc":"吃猪肉，强身健体","GDis":null,"GId":8,"GName":"猪肉","GPic":"\/upload\/20160327233002.jpg","GPrice":23.0,"GType":null,"categoryId":3,"g_count":200,"g_discount":0,"g_integration":0,"g_reco":"0"},{"GDesc":"羊肉能御风寒，又可补身体，适宜于冬季食用，故被称为冬令补品，深受人们欢迎。","GDis":null,"GId":19,"GName":"羊肉","GPic":"\/upload\/yangrou.jpg","GPrice":36.0,"GType":null,"categoryId":3,"g_count":2,"g_discount":0,"g_integration":0,"g_reco":"0"},{"GDesc":"牛肉是指从牛身上得出的肉，为常见的肉品之一。","GDis":null,"GId":20,"GName":"牛肉","GPic":"\/upload\/niurou.jpg","GPrice":48.0,"GType":null,"categoryId":3,"g_count":2,"g_discount":0,"g_integration":0,"g_reco":"0"},{"GDesc":"鸡肉不但适于热炒、炖汤，而且是比较适合冷食凉拌的肉类。","GDis":null,"GId":29,"GName":"鸡肉","GPic":"\/upload\/jirou.jpg","GPrice":16.8,"GType":null,"categoryId":3,"g_count":200,"g_discount":0,"g_integration":0,"g_reco":"0"},{"GDesc":"鸭是为餐桌上的上乘肴馔，也是人们进补的优良食品。","GDis":null,"GId":30,"GName":"鸭肉","GPic":"\/upload\/yarou.jpg","GPrice":18.8,"GType":null,"categoryId":3,"g_count":100,"g_discount":0,"g_integration":0,"g_reco":"0"}],"msg":"","result":"ok"}
+[2022-02-16 23:02:13,597] INFO [testselectGoodCategory testcase_05_selectGoodCategory.py 33] 测试结果为Fail
+[2022-02-16 23:02:13,664] INFO [TestCase_Log testcase_log.py 9] 测试用例：selectGoodCategory_business_logic
+[2022-02-16 23:02:13,664] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/goodsSelectByCategory.action
+[2022-02-16 23:02:13,664] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"category_id":"3","category_id":"4"}
+[2022-02-16 23:02:13,664] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:13,664] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"category_id":4,"list":[{"GDesc":"苹果维生素含量很高","GDis":null,"GId":9,"GName":"苹果","GPic":"\/upload\/20160327233018.jpg","GPrice":5.9,"GType":null,"categoryId":4,"g_count":300,"g_discount":0,"g_integration":0,"g_reco":"1"},{"GDesc":"芒果是一种特别常见的水果，颜色鲜亮，让人很有食欲。","GDis":null,"GId":14,"GName":"芒果","GPic":"\/upload\/mangguo.jpg","GPrice":5.8,"GType":null,"categoryId":4,"g_count":300,"g_discount":0,"g_integration":0,"g_reco":"1"},{"GDesc":"草莓营养丰富，含有果糖、蔗糖、葡萄糖、柠檬酸、苹果酸、水杨酸、胡萝卜素、氨基酸以及钙、磷、铁、钾、锌、铬等矿物质。","GDis":null,"GId":15,"GName":"草莓","GPic":"\/upload\/caomei.jpg","GPrice":4.8,"GType":null,"categoryId":4,"g_count":500,"g_discount":0,"g_integration":0,"g_reco":"1"},{"GDesc":"莲雾是一种可治多种疾病的佳果,性味甘平,功能润肺、止咳、除痰、凉血、收敛。","GDis":null,"GId":18,"GName":"莲雾","GPic":"\/upload\/lianwu.jpg","GPrice":6.8,"GType":null,"categoryId":4,"g_count":30,"g_discount":0,"g_integration":0,"g_reco":"1"},{"GDesc":"凤梨营养丰富，其成分包括糖类、蛋白质、脂肪、维生素C。","GDis":null,"GId":31,"GName":"菠萝","GPic":"\/upload\/boluo.jpg","GPrice":2.9,"GType":null,"categoryId":4,"g_count":3,"g_discount":0,"g_integration":0,"g_reco":"1"},{"GDesc":"香蕉味香、富含营养，终年可收获，在温带地区也很受重视。","GDis":null,"GId":32,"GName":"香蕉","GPic":"\/upload\/xiangjiao.jpg","GPrice":2.9,"GType":null,"categoryId":4,"g_count":3,"g_discount":0,"g_integration":0,"g_reco":"1"},{"GDesc":"椰子综合利用产品有360多种，具有极高的经济价值，全株各部分都有用途，椰子可生产不同的产品，被充分利用于不同行业，是热带地区独特的可再生、绿色、环保型资源。","GDis":null,"GId":43,"GName":"椰子","GPic":"\/upload\/yezi.png","GPrice":8.0,"GType":"每个","categoryId":4,"g_count":300,"g_discount":0,"g_integration":0,"g_reco":"1"}],"msg":"","result":"ok"}
+[2022-02-16 23:02:13,665] INFO [testselectGoodCategory testcase_05_selectGoodCategory.py 33] 测试结果为Fail
+[2022-02-16 23:02:13,724] INFO [tearDownClass testcase_05_selectGoodCategory.py 18] selectGoodCategory接口用例页结束
+[2022-02-16 23:02:13,746] INFO [setUpClass testcase_06_addOrder.py 15] addOrder接口用例页开始
+[2022-02-16 23:02:13,829] INFO [TestCase_Log testcase_log.py 9] 测试用例：addOrder_para_nomal
+[2022-02-16 23:02:13,829] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/orderAdd.action
+[2022-02-16 23:02:13,829] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"orderStr": "fc,8,猪肉,23.0,1,深圳市宝安区中南花园"}
+[2022-02-16 23:02:13,829] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 23:02:13,830] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":0,"msg":"","orderStr":"fc,8,猪肉,23.0,1,深圳市宝安区中南花园","result":"ok"}
+[2022-02-16 23:02:13,838] INFO [testaddOrder testcase_06_addOrder.py 40] 测试结果为Pass
+[2022-02-16 23:02:13,972] INFO [TestCase_Log testcase_log.py 9] 测试用例：addOrder_para_mix
+[2022-02-16 23:02:13,973] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/orderAdd.action
+[2022-02-16 23:02:13,973] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"orderStr": "fc,8,猪肉,23.0,1,深圳市宝安区中南花园", "id": 0}
+[2022-02-16 23:02:13,973] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 23:02:13,974] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":0,"msg":"","orderStr":"fc,8,猪肉,23.0,1,深圳市宝安区中南花园","result":"ok"}
+[2022-02-16 23:02:13,975] INFO [testaddOrder testcase_06_addOrder.py 40] 测试结果为Pass
+[2022-02-16 23:02:14,118] INFO [TestCase_Log testcase_log.py 9] 测试用例：addOrder_para_len
+[2022-02-16 23:02:14,120] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/orderAdd.action
+[2022-02-16 23:02:14,120] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"orderStr": "fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园fc,8,猪肉,23.0,1,深圳市宝安区中南花园fc,8,猪肉,23.0,1,深圳市宝安区中南花园fc,8,猪肉,23.0,1,深圳市宝安区中南花园fc,8,猪肉,23.0,1,深圳市宝安区中南花园fc,8,猪肉,23.0,1,深圳市宝安区中南花园"}
+[2022-02-16 23:02:14,120] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:14,121] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":0,"msg":"","orderStr":"fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园,fc,8,猪肉,23.0,1,深圳市宝安区中南花园fc,8,猪肉,23.0,1,深圳市宝安区中南花园fc,8,猪肉,23.0,1,深圳市宝安区中南花园fc,8,猪肉,23.0,1,深圳市宝安区中南花园fc,8,猪肉,23.0,1,深圳市宝安区中南花园fc,8,猪肉,23.0,1,深圳市宝安区中南花园","result":"ok"}
+[2022-02-16 23:02:14,125] INFO [testaddOrder testcase_06_addOrder.py 48] 断言异常，测试结果为Fail
+[2022-02-16 23:02:14,265] INFO [TestCase_Log testcase_log.py 9] 测试用例：addOrder_business_logic
+[2022-02-16 23:02:14,265] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/orderAdd.action
+[2022-02-16 23:02:14,265] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"orderStr": "fc,8,猪肉,23.0,-1,深圳市宝安区中南花园"}
+[2022-02-16 23:02:14,265] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:14,265] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":0,"msg":"","orderStr":"fc,8,猪肉,23.0,-1,深圳市宝安区中南花园","result":"ok"}
+[2022-02-16 23:02:14,268] INFO [testaddOrder testcase_06_addOrder.py 48] 断言异常，测试结果为Fail
+[2022-02-16 23:02:14,332] INFO [tearDownClass testcase_06_addOrder.py 21] addOrder接口用例页结束
+[2022-02-16 23:02:14,332] INFO [setUpClass testcase_07_selectOrder.py 14] selectOrder接口用例页开始
+[2022-02-16 23:02:14,356] INFO [TestCase_Log testcase_log.py 9] 测试用例：selectOrder_para_nomal
+[2022-02-16 23:02:14,357] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/indentSelect.action
+[2022-02-16 23:02:14,357] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id":"1","gotoPage":"0"}
+[2022-02-16 23:02:14,357] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 23:02:14,357] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":null,"gotoPage":0,"id":0,"list":[{"GAmount":30.0,"GId":10,"GName":"大米","GNum":10,"GPrice":3.0,"OAddr":"广州市天河区","OState":"已发货","OTime":"2016-03-20T00:00:00","account":"zhangsan","id":1}],"msg":"","pageCount":12,"pageIndex":1,"result":"ok","totalCount":3,"totalPage":1}
+[2022-02-16 23:02:14,357] INFO [testselectOrder testcase_07_selectOrder.py 33] 测试结果为Pass
+[2022-02-16 23:02:14,441] INFO [TestCase_Log testcase_log.py 9] 测试用例：selectOrder_para_mix
+[2022-02-16 23:02:14,442] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/indentSelect.action
+[2022-02-16 23:02:14,442] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id":"1","gotoPage":"0","totalPage":1}
+[2022-02-16 23:02:14,442] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 23:02:14,442] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":null,"gotoPage":0,"id":0,"list":[{"GAmount":30.0,"GId":10,"GName":"大米","GNum":10,"GPrice":3.0,"OAddr":"广州市天河区","OState":"已发货","OTime":"2016-03-20T00:00:00","account":"zhangsan","id":1}],"msg":"","pageCount":12,"pageIndex":1,"result":"ok","totalCount":3,"totalPage":1}
+[2022-02-16 23:02:14,443] INFO [testselectOrder testcase_07_selectOrder.py 33] 测试结果为Pass
+[2022-02-16 23:02:14,540] INFO [TestCase_Log testcase_log.py 9] 测试用例：selectOrder_para_opposite
+[2022-02-16 23:02:14,541] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/indentSelect.action
+[2022-02-16 23:02:14,541] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"gotoPage":"0"}
+[2022-02-16 23:02:14,541] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:14,586] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":null,"gotoPage":0,"id":0,"list":[{"GAmount":23.0,"GId":8,"GName":"猪肉","GNum":1,"GPrice":23.0,"OAddr":"深圳市宝安区中南花园","OState":"已付款","OTime":"2022-02-10T00:00:00","account":"admin","id":46},{"GAmount":12.0,"GId":10,"GName":"大米","GNum":4,"GPrice":3.0,"OAddr":"深圳市南山区麒麟花园","OState":"已发货","OTime":"2016-03-22T00:00:00","account":"admin","id":2},{"GAmount":30.0,"GId":10,"GName":"大米","GNum":10,"GPrice":3.0,"OAddr":"广州市天河区","OState":"已发货","OTime":"2016-03-20T00:00:00","account":"zhangsan","id":1}],"msg":"","pageCount":12,"pageIndex":1,"result":"ok","totalCount":3,"totalPage":1}
+[2022-02-16 23:02:14,586] INFO [testselectOrder testcase_07_selectOrder.py 36] 测试结果为Fail
+[2022-02-16 23:02:14,726] INFO [TestCase_Log testcase_log.py 9] 测试用例：selectOrder_business_logic
+[2022-02-16 23:02:14,726] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/indentSelect.action
+[2022-02-16 23:02:14,726] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id":"1","gotoPage":"0","gotoPage":"-1"}
+[2022-02-16 23:02:14,726] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:14,727] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":null,"gotoPage":-1,"id":0,"list":[{"GAmount":30.0,"GId":10,"GName":"大米","GNum":10,"GPrice":3.0,"OAddr":"广州市天河区","OState":"已发货","OTime":"2016-03-20T00:00:00","account":"zhangsan","id":1}],"msg":"","pageCount":12,"pageIndex":1,"result":"ok","totalCount":3,"totalPage":1}
+[2022-02-16 23:02:14,727] INFO [testselectOrder testcase_07_selectOrder.py 36] 测试结果为Fail
+[2022-02-16 23:02:14,780] INFO [tearDownClass testcase_07_selectOrder.py 18] selectOrder接口用例页结束
+[2022-02-16 23:02:14,809] INFO [setUpClass testcase_08_unfinishOrder.py 15] unfinishOrder接口用例页开始
+[2022-02-16 23:02:14,940] INFO [TestCase_Log testcase_log.py 9] 测试用例：unfinishOrder_para_nomal
+[2022-02-16 23:02:14,941] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 23:02:14,941] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "state": "2", "gotoPage": "0"}
+[2022-02-16 23:02:14,941] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 23:02:14,941] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":"操作成功","result":"fail","state":2}
+[2022-02-16 23:02:14,943] INFO [testselectOrder testcase_08_unfinishOrder.py 48] 断言异常，测试结果为Fail
+[2022-02-16 23:02:15,056] INFO [TestCase_Log testcase_log.py 9] 测试用例：unfinishOrder_para_mix
+[2022-02-16 23:02:15,057] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 23:02:15,057] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "msg": "操作成功", "state": "2", "gotoPage": "0"}
+[2022-02-16 23:02:15,057] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 23:02:15,058] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":"操作成功","result":"fail","state":2}
+[2022-02-16 23:02:15,059] INFO [testselectOrder testcase_08_unfinishOrder.py 48] 断言异常，测试结果为Fail
+[2022-02-16 23:02:15,125] INFO [TestCase_Log testcase_log.py 9] 测试用例：unfinishOrder_bypass_ui
+[2022-02-16 23:02:15,125] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 23:02:15,125] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "state": "2", "gotoPage": "-2"}
+[2022-02-16 23:02:15,125] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:15,125] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":"操作成功","result":"fail","state":2}
+[2022-02-16 23:02:15,126] INFO [testselectOrder testcase_08_unfinishOrder.py 45] 测试结果为Pass
+[2022-02-16 23:02:15,197] INFO [TestCase_Log testcase_log.py 9] 测试用例：unfinishOrder_para_opposite
+[2022-02-16 23:02:15,198] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 23:02:15,198] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "gotoPage": "0"}
+[2022-02-16 23:02:15,198] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:15,198] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":"操作成功","result":"fail","state":2}
+[2022-02-16 23:02:15,199] INFO [testselectOrder testcase_08_unfinishOrder.py 45] 测试结果为Pass
+[2022-02-16 23:02:15,285] INFO [TestCase_Log testcase_log.py 9] 测试用例：unfinishOrder_business_logic
+[2022-02-16 23:02:15,286] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 23:02:15,286] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "2", "state": "2", "gotoPage": "-1"}
+[2022-02-16 23:02:15,286] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:15,286] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":2,"msg":"操作成功","result":"ok","state":2}
+[2022-02-16 23:02:15,287] INFO [testselectOrder testcase_08_unfinishOrder.py 48] 断言异常，测试结果为Fail
+[2022-02-16 23:02:15,356] INFO [tearDownClass testcase_08_unfinishOrder.py 21] unfinishOrder接口用例页结束
+[2022-02-16 23:02:15,377] INFO [setUpClass testcase_09_finishOrder.py 15] finishOrder接口用例页开始
+[2022-02-16 23:02:15,440] INFO [TestCase_Log testcase_log.py 9] 测试用例：finishOrder_para_nomal
+[2022-02-16 23:02:15,440] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 23:02:15,440] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "state": "3", "gotoPage": "0"}
+[2022-02-16 23:02:15,440] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 23:02:15,441] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":"操作成功","result":"fail","state":3}
+[2022-02-16 23:02:15,446] INFO [testselectOrder testcase_09_finishOrder.py 48] 断言异常，测试结果为Fail
+[2022-02-16 23:02:15,586] INFO [TestCase_Log testcase_log.py 9] 测试用例：finishOrder_para_mix
+[2022-02-16 23:02:15,587] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 23:02:15,587] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "msg": "操作成功", "state": "3", "gotoPage": "0"}
+[2022-02-16 23:02:15,588] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-16 23:02:15,589] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":"操作成功","result":"fail","state":3}
+[2022-02-16 23:02:15,598] INFO [testselectOrder testcase_09_finishOrder.py 48] 断言异常，测试结果为Fail
+[2022-02-16 23:02:15,691] INFO [TestCase_Log testcase_log.py 9] 测试用例：finishOrder_bypass_ui
+[2022-02-16 23:02:15,691] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 23:02:15,691] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "state": "3", "gotoPage": "-2"}
+[2022-02-16 23:02:15,692] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:15,692] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":"操作成功","result":"fail","state":3}
+[2022-02-16 23:02:15,693] INFO [testselectOrder testcase_09_finishOrder.py 45] 测试结果为Pass
+[2022-02-16 23:02:15,753] INFO [TestCase_Log testcase_log.py 9] 测试用例：finishOrder_para_opposite
+[2022-02-16 23:02:15,754] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 23:02:15,754] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "gotoPage": "0"}
+[2022-02-16 23:02:15,754] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:15,754] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":"操作成功","result":"fail","state":3}
+[2022-02-16 23:02:15,755] INFO [testselectOrder testcase_09_finishOrder.py 45] 测试结果为Pass
+[2022-02-16 23:02:15,822] INFO [TestCase_Log testcase_log.py 9] 测试用例：finishOrder_business_logic
+[2022-02-16 23:02:15,822] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-16 23:02:15,822] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "state": "2", "gotoPage": "-1"}
+[2022-02-16 23:02:15,822] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-16 23:02:15,823] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":"操作成功","result":"fail","state":2}
+[2022-02-16 23:02:15,823] INFO [testselectOrder testcase_09_finishOrder.py 45] 测试结果为Pass
+[2022-02-16 23:02:15,887] INFO [tearDownClass testcase_09_finishOrder.py 21] finishOrder接口用例页结束
+[2022-02-16 23:02:15,944] INFO [<module> run_all.py 20] =============测试结束=============

@@ -1,0 +1,21 @@
+[2022-02-15 23:49:13,083] INFO [setUpClass testcase_08_unfinishOrder.py 14] unfinishOrder接口用例页开始
+[2022-02-15 23:49:15,738] INFO [TestCase_Log testcase_log.py 9] 测试用例：unfinishOrder_para_nomal
+[2022-02-15 23:49:15,739] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-15 23:49:15,739] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "state": "2", "gotoPage": "0"}
+[2022-02-15 23:49:15,739] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-15 23:49:15,739] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":null,"result":"fail","state":2}
+[2022-02-15 23:49:16,035] INFO [TestCase_Log testcase_log.py 9] 测试用例：unfinishOrder_bypass_ui
+[2022-02-15 23:49:16,035] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-15 23:49:16,035] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "state": "2", "gotoPage": "-2"}
+[2022-02-15 23:49:16,035] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-15 23:49:16,035] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":null,"result":"fail","state":2}
+[2022-02-15 23:49:16,089] INFO [TestCase_Log testcase_log.py 9] 测试用例：unfinishOrder_para_opposite
+[2022-02-15 23:49:16,089] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-15 23:49:16,089] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "3", "gotoPage": "0"}
+[2022-02-15 23:49:16,090] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-15 23:49:16,090] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":3,"msg":null,"result":"fail","state":2}
+[2022-02-15 23:49:16,255] INFO [TestCase_Log testcase_log.py 9] 测试用例：unfinishOrder_business_logic
+[2022-02-15 23:49:16,255] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/order/indentEdit.action
+[2022-02-15 23:49:16,255] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"id": "2", "state": "2", "gotoPage": "-1"}
+[2022-02-15 23:49:16,256] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-15 23:49:16,256] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":2,"msg":"操作成功","result":"ok","state":2}

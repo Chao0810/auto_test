@@ -1,0 +1,1 @@
+[2022-02-16 00:13:51,672] INFO [updata_db db.py 37] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'updata indent set o_state='已完成' where account='fu'' at line 1")

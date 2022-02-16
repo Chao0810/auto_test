@@ -12,7 +12,7 @@ sys.path.append(r"D:\project\cailanzi")
 def sendEmail(new_report_file,new_log_file):
 
     #读取邮件内容
-    with open(file=new_report_file,encoding="utf-8") as fp: #打开html报告
+    with open(file=new_report_file,mode="rb") as fp: #打开html报告
          email_body = fp.read() #读取报告内容
     #读取日志内容
     with open(file=new_log_file,encoding="utf-8") as fp2: #打开日志文件

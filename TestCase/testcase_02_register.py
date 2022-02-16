@@ -1,5 +1,5 @@
 import unittest,logging,requests,json,ddt,sys
-from Lib import db,readExcelData,testcase_log,write_exceldata,logger
+from Lib import db,readExcelData,testcase_log,write_exceldata,logger,caseAssert
 from Config import config
 sys.path.append(r"D:\project\cailanzi")
 
@@ -13,6 +13,9 @@ class TestRegister(unittest.TestCase):
     def setUpClass(cls):
         logger.info("{}接口用例页开始".format(config.sh2))
 
+    @classmethod
+    def tearDownClass(cls):
+        logger.info("{}接口用例页结束".format(config.sh2))
 
     @ddt.data(*data_list)
     def testRegister(self,testdata):
@@ -26,43 +29,28 @@ class TestRegister(unittest.TestCase):
         expect_result = json.loads(testdata["Expect_Res"])["result"] #获取预期的result值
         exist = DataBase.check_db(tab="user",key="account",value=data_account) #数据库断言值，True/False
 
+        #断言
         try:
-            self.assertEqual(res_result,expect_result,msg="result不相等")
+            self.assertEqual(res.status_code,200,msg="响应码错误")
+            self.assertEqual(res_result,expect_result,msg="与预期的result不相等")
             if expect_result == "ok":
-                try:
-                    self.assertTrue(exist,msg="数据库中不存在该数据")
-                    logger.info("测试结果为Pass")
-                    write_exceldata.writeExcelData(datafile=config.api_data_path,sheetname=config.sh2,row=int(testdata["Id"]),column=len(testdata)-1,value="Pass")
-                    DataBase.del_db(tab="user",key="account",value=data_account) #数据库环境清理
-                except Exception as e:
-                    logger.info("测试结果为Fail")
-                    write_exceldata.writeExcelData(datafile=config.api_data_path,sheetname=config.sh2,row=int(testdata["Id"]),column=len(testdata)-1,value="Fail")
-                    raise e
+                self.assertTrue(exist,msg="数据库中本应存在该数据，却不存在")
+                logger.info("测试结果为Pass")
+                write_exceldata.writeExcelData(datafile=config.api_data_path,sheetname=config.sh2,row=int(testdata["Id"]),column=len(testdata)-1,value="Pass")
+                DataBase.del_db(tab="user",key="account",value=data_account) #数据库环境清理
             else:
-                try:
-                    self.assertFalse(exist,msg="数据库中不存在该数据")
-                    logger.info("测试结果为Pass")
-                    write_exceldata.writeExcelData(datafile=config.api_data_path,sheetname=config.sh2,row=int(testdata["Id"]),column=len(testdata)-1,value="Pass")
-                except Exception as e:
-                    logger.info("测试结果为Fail")
-                    write_exceldata.writeExcelData(datafile=config.api_data_path,sheetname=config.sh2,row=int(testdata["Id"]),column=len(testdata)-1,value="Fail")
-                    raise e
+                self.assertFalse(exist,msg="数据库中本不应存在该数据，却存在")
+                logger.info("测试结果为Pass")
+                write_exceldata.writeExcelData(datafile=config.api_data_path,sheetname=config.sh2,row=int(testdata["Id"]),column=len(testdata)-1,value="Pass")
         except Exception as e:
-            logger.info("测试结果为Fail")
+            logger.info("断言异常，测试结果为Fail")
             write_exceldata.writeExcelData(datafile=config.api_data_path,sheetname=config.sh2,row=int(testdata["Id"]),column=len(testdata)-1,value="Fail")
+            if exist == True:
+                DataBase.del_db(tab="user",key="account",value=data_account) #数据库环境清理
             raise e
         finally:
             write_exceldata.writeExcelData(datafile=config.api_data_path,sheetname=config.sh2,row=int(testdata["Id"]),column=len(testdata)-2,value=res.text)
 
-        #抓漏网之鱼
-        if expect_result == "fail" and exist == True:
-            logger.info("本应该注册失败的，但却成功了")
-            DataBase.del_db(tab="user",key="account",value=data_account) #数据库环境清理
-
-
-    @classmethod
-    def tearDownClass(cls):
-        logger.info("{}接口用例页结束".format(config.sh2))
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

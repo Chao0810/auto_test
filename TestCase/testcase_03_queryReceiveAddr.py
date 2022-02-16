@@ -13,6 +13,9 @@ class TestQueryReceiveAddr(unittest.TestCase):
     def setUpClass(cls):
         logger.info("{}接口测试页开始".format(config.sh3))
 
+    @classmethod
+    def tearDownClass(cls):
+        logger.info("{}接口测试页结束".format(config.sh3))
 
     @ddt.data(*data_list)
     def testQueryReceiveAddr(self,testdata):
@@ -32,10 +35,6 @@ class TestQueryReceiveAddr(unittest.TestCase):
             raise e
         finally:
             write_exceldata.writeExcelData(config.api_data_path,config.sh3,int(testdata["Id"]),len(testdata)-2,res.text)
-
-    @classmethod
-    def tearDownClass(cls):
-        logger.info("{}接口测试页结束".format(config.sh3))
 
 
 if __name__ == "__main__":

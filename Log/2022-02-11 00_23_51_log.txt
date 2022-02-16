@@ -1,0 +1,17 @@
+[2022-02-11 00:23:51,192] INFO [setUpClass testcase_06_addOrder.py 14] addOrder接口用例页开始
+[2022-02-11 00:23:51,233] INFO [TestCase_Log testcase_log.py 9] 测试用例：addOrder_para_nomal
+[2022-02-11 00:23:51,233] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/orderAdd.action
+[2022-02-11 00:23:51,234] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"orderStr": "admin,8,猪肉,23.0,1,深圳市宝安区中南花园"}
+[2022-02-11 00:23:51,234] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"ok"}
+[2022-02-11 00:23:51,234] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":0,"msg":"","orderStr":"admin,8,猪肉,23.0,1,深圳市宝安区中南花园","result":"ok"}
+[2022-02-11 00:23:51,295] INFO [TestCase_Log testcase_log.py 9] 测试用例：addOrder_para_len
+[2022-02-11 00:23:51,295] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/orderAdd.action
+[2022-02-11 00:23:51,296] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"orderStr": "admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园admin,8,猪肉,23.0,1,深圳市宝安区中南花园admin,8,猪肉,23.0,1,深圳市宝安区中南花园admin,8,猪肉,23.0,1,深圳市宝安区中南花园admin,8,猪肉,23.0,1,深圳市宝安区中南花园admin,8,猪肉,23.0,1,深圳市宝安区中南花园"}
+[2022-02-11 00:23:51,296] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-11 00:23:51,296] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":0,"msg":"","orderStr":"admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园,admin,8,猪肉,23.0,1,深圳市宝安区中南花园admin,8,猪肉,23.0,1,深圳市宝安区中南花园admin,8,猪肉,23.0,1,深圳市宝安区中南花园admin,8,猪肉,23.0,1,深圳市宝安区中南花园admin,8,猪肉,23.0,1,深圳市宝安区中南花园admin,8,猪肉,23.0,1,深圳市宝安区中南花园","result":"ok"}
+[2022-02-11 00:23:51,596] INFO [TestCase_Log testcase_log.py 9] 测试用例：addOrder_business_logic
+[2022-02-11 00:23:51,597] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/orderAdd.action
+[2022-02-11 00:23:51,597] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"orderStr": "admin,8,猪肉,23.0,-1,深圳市宝安区中南花园"}
+[2022-02-11 00:23:51,598] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result":"fail"}
+[2022-02-11 00:23:51,598] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"id":0,"msg":"","orderStr":"admin,8,猪肉,23.0,-1,深圳市宝安区中南花园","result":"ok"}
+[2022-02-11 00:23:51,603] INFO [tearDownClass testcase_06_addOrder.py 18] addOrder接口用例页结束

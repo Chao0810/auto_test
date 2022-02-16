@@ -1,0 +1,62 @@
+[2022-02-09 23:27:05,604] INFO [setUpClass testcase_01_login.py 15] Login接口用例页开始
+[2022-02-09 23:27:06,956] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_nomal
+[2022-02-09 23:27:06,956] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-09 23:27:06,957] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin","password":"admin"}
+[2022-02-09 23:27:06,957] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "ok"}
+[2022-02-09 23:27:06,957] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":null,"password":"admin","result":"ok"}
+[2022-02-09 23:27:06,957] INFO [testLogin testcase_01_login.py 24] 测试结果为Pass
+[2022-02-09 23:27:07,379] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_mix
+[2022-02-09 23:27:07,380] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-09 23:27:07,381] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin","password":"admin","result":"error"}
+[2022-02-09 23:27:07,381] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-02-09 23:27:07,381] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":null,"password":"admin","result":"ok"}
+[2022-02-09 23:27:07,382] INFO [testLogin testcase_01_login.py 27] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-02-09 23:27:07,769] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_type
+[2022-02-09 23:27:07,769] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-09 23:27:07,769] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin","password":123456}
+[2022-02-09 23:27:07,769] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-02-09 23:27:07,770] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":"密码不正确","password":"123456","result":"error"}
+[2022-02-09 23:27:07,770] INFO [testLogin testcase_01_login.py 24] 测试结果为Pass
+[2022-02-09 23:27:07,972] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_len
+[2022-02-09 23:27:07,973] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-09 23:27:07,974] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"adminadminadminadmin","password":"admin"}
+[2022-02-09 23:27:07,974] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-02-09 23:27:07,975] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"adminadminadminadmin","addr":null,"msg":"账户名不存在","password":"admin","result":"error"}
+[2022-02-09 23:27:07,975] INFO [testLogin testcase_01_login.py 24] 测试结果为Pass
+[2022-02-09 23:27:08,129] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_para_opposite
+[2022-02-09 23:27:08,130] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-09 23:27:08,130] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin"}
+[2022-02-09 23:27:08,130] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-02-09 23:27:08,130] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":"账户名不存在","password":"admin","result":"ok"}
+[2022-02-09 23:27:08,131] INFO [testLogin testcase_01_login.py 27] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-02-09 23:27:08,383] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_bypass_ui
+[2022-02-09 23:27:08,383] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-09 23:27:08,384] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"password":"admin"}
+[2022-02-09 23:27:08,384] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-02-09 23:27:08,384] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"admin","addr":null,"msg":"账户名不存在","password":"admin","result":"ok"}
+[2022-02-09 23:27:08,385] INFO [testLogin testcase_01_login.py 27] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-02-09 23:27:09,268] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_bypass_auth
+[2022-02-09 23:27:09,268] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-09 23:27:09,268] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"hc","password":"admin"}
+[2022-02-09 23:27:09,268] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-02-09 23:27:09,268] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"hc","addr":null,"msg":"账户名不存在","password":"admin","result":"error"}
+[2022-02-09 23:27:09,269] INFO [testLogin testcase_01_login.py 24] 测试结果为Pass
+[2022-02-09 23:27:09,505] INFO [TestCase_Log testcase_log.py 9] 测试用例：Login_business_logic
+[2022-02-09 23:27:09,505] INFO [TestCase_Log testcase_log.py 10] Url：http://192.168.107.135:80/freshO2O/login.action
+[2022-02-09 23:27:09,506] INFO [TestCase_Log testcase_log.py 11] 请求参数：{"account":"admin","password":"admin","account":"lisi","password":"lisi"}
+[2022-02-09 23:27:09,506] INFO [TestCase_Log testcase_log.py 12] 期望结果：{"result": "error"}
+[2022-02-09 23:27:09,506] INFO [TestCase_Log testcase_log.py 13] 实际结果：{"account":"lisi","addr":"广州市黄埔区","msg":"账户名不存在","password":"lisi","result":"ok"}
+[2022-02-09 23:27:09,506] INFO [testLogin testcase_01_login.py 27] 测试结果为Fail,具体原因是：'ok' != 'error'
+- ok
++ error
+ : 断言失败
+[2022-02-09 23:27:09,662] INFO [tearDownClass testcase_01_login.py 36] Login接口用例页结束

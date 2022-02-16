@@ -14,6 +14,9 @@ class TestLoginApi(unittest.TestCase): # 类必须以Test开头，继承TestCase
     def setUpClass(cls): # 类方法，注意后面是cls（也可以是self），整个类只执行一次
        logger.info("{}接口用例页开始".format(config.sh1))
 
+    @classmethod
+    def tearDownClass(cls):
+        logger.info("{}接口用例页结束".format(config.sh1))
 
     @ddt.data(*data_list) #装饰测试方法
     def testLogin(self,testdata): #testdata代表传入的每条参数
@@ -29,11 +32,6 @@ class TestLoginApi(unittest.TestCase): # 类必须以Test开头，继承TestCase
              raise e
          finally:
              write_exceldata.writeExcelData(datafile=config.api_data_path,sheetname=config.sh1,row=int(testdata["Id"]),column=len(testdata)-2,value=res.text)
-
-
-    @classmethod
-    def tearDownClass(cls):
-        logger.info("{}接口用例页结束".format(config.sh1))
 
 
 if __name__ == "__main__": # 非必要，用于测试代码
